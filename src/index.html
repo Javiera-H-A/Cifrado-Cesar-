@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Caesar Cipher</title>
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <script src="cipher.js"></script>
+      <div id="root"></div>
+    <script src="index.js" type="module"></script>
+
+   <section id="contenedor-cipher" class="content">
+    <header>
+      <h1>Cipher Cesar</h1>
+      <h2>Codifica y Decodifica tus mensajes secretos</h2>
+    </header>
+
+    <!--Elección para Codificar o Decodificar-->
+    
+    <div id="Codi-Deco" class="links">
+      <a href="" id="linkCodi">Codificar</a>
+      <a href="" id="linkDeco">Decodificar</a>
+    </div>
+
+    <!--Para ingresar mensaje a codificar-->
+
+    <div id="cuadrosParaCodificar" style="display:block;">
+      <div>
+        <p>Ingresa tu mensaje:</p>
+        <textarea type="text" id="boxMens" placeholder="Ingresa tu mensaje..." onchange="codiMensaje" ></textarea>
+      </div>
+  <br>
+      <div>
+        <label id="numDesplazo"> Ingresa N° que deseas desplazar    </label>
+        <input type="number" id="numOffset">
+      </div>
+  <br>
+    <button id="btnCodi">Codificar</button>
+  <br><br>
+      <div id="divmenCodificado">
+        <textarea id="boxMenCodi"></textarea>
+      </div>
+  <br>
+    <button id="refrescar" onclick="location.reload();">Refrescar</button>
+  </div>
+
+    <!--Para mostrar el mensaje codificado-->
+
+<div id="cuadrosParaDecodificar" style="display:none;">
+      <div>
+        <p>Ingresa tu mensaje:</p>
+        <textarea type="text" id="boxMensDeco" placeholder="Ingresa tu mensaje..." onchange="decoMensaje" ></textarea>
+      </div>
+  <br><br>
+      <div>
+        <label> ingresa N° que deseas desplazar</label>
+        <input type="number" id="numOffset">
+      </div>
+  <br><br>
+    <button id="btnDecodi">Codificar</button>
+  <br><br>
+      <div id="divmenDecodificado">
+        <textarea id="boxMenDecodi"></textarea>
+      </div>
+  <br><br>
+    <button onclick="location.reload();">Refrescar</button>
+  </div>
+
+    </section>
+
+  </body>
+</html>

@@ -1,6 +1,11 @@
 @font-face {
-    font-family: "galacticregular";
-    src: url("../galactic_memesbruh03-webfont.woff");
+    font-family: 'moderna';
+    src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/133207/moderna_-webfont.eot');
+    src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/133207/moderna_-webfont.eot?#iefix') format('embedded-opentype'),
+         url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/133207/moderna_-webfont.woff2') format('woff2'),
+         url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/133207/moderna_-webfont.woff') format('woff'),
+         url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/133207/moderna_-webfont.ttf') format('truetype'),
+         url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/133207/moderna_-webfont.svg') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -16,49 +21,55 @@
     box-shadow: 3px 3px 7px 1px #63b0e6;
 }
 h1 {
-    font-family: "galacticregular";
+    font-family: 'moderna';
     font-size: 55px;
     text-align: center;
     color: #d7bae0;
     font-weight: 600;
     margin-top: 5px;
+    letter-spacing: 4px;
 }
 h2 {
-    font-family:cursive,monospace;
+    font-family:'moderna';
     font-size: 20px;
     text-align: center;
     color: #935ca3;
     font-weight: 600;
-    margin-top: -40px;
+    margin-top: -30px;
+    letter-spacing: 3px;
 }
 p {
-    font-family:cursive,monospace;
+    font-family:'moderna';
     font-size: 21px;
     color: #636ed1;
     font-weight: 600;
+    letter-spacing: 3px;
 }
 #numDesplazo {
-    font-family:cursive,monospace;
+    font-family:'moderna';
     font-size: 21px;
     color: #636ed1;
     font-weight: 600;
+    letter-spacing: 3px;
 }
 
 #linkCodi{
     font-size: 25px;
-    font-family: cursive,arial;
+    font-family:'moderna';
     margin:auto;
     padding: 5px;
     color: #d7bae0;
     font-weight: 600;
+    letter-spacing: 2px;
 }
 #linkDeco{
     font-size: 25px;
-    font-family: cursive,arial;
+    font-family: 'moderna';
     margin:auto;
     padding: 5px;
     color: #d7bae0;
     font-weight: 600;
+    letter-spacing: 2px;
 }
 .links{
     text-align: center;
@@ -75,17 +86,24 @@ p {
     border-radius: 10px;
     background-color: rgba(255,255,255,0.5);
     font-weight: bold;
+    letter-spacing: 2px;
+    font-family: 'moderna';
 }
 ::placeholder{
     color:#000;
     font-weight: bold;
+    letter-spacing: 2px;
+    font-family: 'moderna';
 }
 #boxMenCodi {
     width:100%;
     height: 100px;
     resize: none;
     border-radius: 10px;
+    font-weight: bold;
     background-color: rgba(255,255,255,0.5);
+    letter-spacing: 2px;
+    font-family: 'moderna';
 }
 #numOffset {
     width:10%;
@@ -105,6 +123,8 @@ p {
     font-size: 20px;
     box-shadow: 3px 3px 7px 1px #4c4470;
     cursor: pointer;
+    letter-spacing: 1px;
+    font-family: 'moderna';
 }
 #refrescar {
     border: 0px;
@@ -117,6 +137,8 @@ p {
     font-size: 20px;
     box-shadow: 3px 3px 7px 1px #4c4470;
     cursor: pointer;
+    letter-spacing: 1px;
+    font-family: 'moderna';
 }
 
 .bg{background:url(https://1.bp.blogspot.com/-DC008lu58Nc/W1LMf54UKXI/AAAAAAAAACQ/REydlqiHDecasKOrG7qdP1Z5GQdlRDdxgCLcBGAs/s1600/galaxy-blue.jpg) no-repeat;background-size:cover;height:100%;width:100%;position:fixed;top:0;left:0;z-index:-3}.bg:before{content:'';width:100%;height:100%;background:#000;position:fixed;z-index:-1;top:0;left:0;opacity:.3}

@@ -7,9 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
-    <script src="cipher.js"></script>
+    
       <div id="root"></div>
-    <script src="index.js" type="module"></script>
+    <script src="index.js" ></script>
+    <script src="cipher.js"></script>
 
    <section id="contenedor-cipher" class="content">
     <header>
@@ -20,8 +21,8 @@
     <!--Elección para Codificar o Decodificar-->
     
     <div id="Codi-Deco" class="links">
-      <a href="" id="linkCodi">Codificar</a>
-      <a href="" id="linkDeco">Decodificar</a>
+      <a href="#" id="linkCodi" onclick="Codecero()">Codificar</a>
+      <a href="#" id="linkDeco" onclick="Codeuno()">Decodificar</a>
     </div>
 
     <!--Para ingresar mensaje a codificar-->
@@ -29,7 +30,7 @@
     <div id="cuadrosParaCodificar" style="display:block;">
       <div>
         <p>Ingresa tu mensaje:</p>
-        <textarea type="text" id="boxMens" placeholder="Ingresa tu mensaje..." onchange="codiMensaje" ></textarea>
+        <textarea type="text" id="boxMens" placeholder="Ingresa tu mensaje..." ></textarea>
       </div>
   <br>
       <div>
@@ -37,7 +38,7 @@
         <input type="number" id="numOffset">
       </div>
   <br>
-    <button id="btnCodi">Codificar</button>
+    <button id="btnCodi" onclick="cipher()">Codificar</button>
   <br><br>
       <div id="divmenCodificado">
         <textarea id="boxMenCodi"></textarea>

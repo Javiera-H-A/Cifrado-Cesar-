@@ -1,3 +1,11 @@
-import cipher from './cipher.js';
+let codeMode=0;
+function Codecero(){
+    codeMode=0;
+}
+function Codeuno(){
+    codeMode=1;
+}
 
-console.log(cipher);
+
+
+

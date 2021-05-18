@@ -10,7 +10,7 @@ Cualquier persona que desee cifrar y desifrar mensajes con una temática espacia
 ![Mobile](VistaCelular.png)
 
  ## versión desktop 
- [Desktop](VistaEscritorio.png)
+ ![Desktop](VistaEscritorio.png)
 
  ## versión Tablet
  ![Tablet](VistaTableta.png)

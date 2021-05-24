@@ -1,22 +1,23 @@
  const cipher = { 
-  encode: (offset, valorTexto) => {
+  encode: (offset, textValue) => {
 
     if (typeof offset !== "number") {
       throw new TypeError ('${ offset } es distinto de {"number"}')
 }
-    if (typeof valorTexto!== "string") {
+    if (typeof textValue!== "string") {
       throw new TypeError ('${ valorTexto } es distinto de {"string"}')
 }
-    let codigoGuardado="";
+    let letterValue;    
     let ascii;
-    let palabraFinal="";
-    let valorLetra="";
+    let savedCode;
+    let finalWord="";
     
-    for(let j=0; j< valorTexto.length; j++){
-      valorLetra=valorTexto.charCodeAt(j);
-      ascii=valorLetra;
-      if ( 97<=valorLetra && valorLetra <= 122){
-        ascii= valorLetra + offset %26; 
+    
+    for(let j=0; j< textValue.length; j++){
+      letterValue=textValue.charCodeAt(j);
+      ascii=letterValue;
+      if ( 97<=letterValue && letterValue <= 122){
+        ascii= letterValue + offset %26; 
         if (ascii > 122) { 
           ascii = ascii -26;
           
@@ -25,8 +26,8 @@
           ascii= ascii +26;
         }
       }
-      if ( 65<= valorLetra && valorLetra <=90){
-        ascii= valorLetra + offset %26; 
+      if ( 65<= letterValue && letterValue <=90){
+        ascii= letterValue + offset %26; 
 
         if (ascii > 90) { 
           ascii = ascii -26;
@@ -35,30 +36,30 @@
           ascii= ascii +26;
         }
       }
-      codigoGuardado= String.fromCharCode(ascii);
-      palabraFinal+= codigoGuardado;
+      savedCode= String.fromCharCode(ascii);
+      finalWord+= savedCode;
     }
-    return palabraFinal;
+    return finalWord;
   },
-  decode: (offset, valorTexto) => {
+  decode: (offset, textValue) => {
 
     if (typeof offset !== "number") {
       throw new TypeError ('${ offset } es distinto de {"number"}')
 }
-    if (typeof valorTexto!== "string") {
+    if (typeof textValue!== "string") {
       throw new TypeError ('${ valorTexto } es distinto de {"string"}')
 }
-    let codigoGuardado="";
+    let letterValue;
     let ascii;
-    let palabraFinal="";
-    let valorLetra="";
+    let savedCode;
+    let finalWord="";
     offset=-offset;
     
-    for(let j=0; j< valorTexto.length; j++){
-      valorLetra=valorTexto.charCodeAt(j);
-      ascii=valorLetra;
-      if ( 97<=valorLetra && valorLetra <= 122){
-        ascii= valorLetra + offset %26; 
+    for(let j=0; j< textValue.length; j++){
+      letterValue=textValue.charCodeAt(j);
+      ascii=letterValue;
+      if ( 97<=letterValue && letterValue <= 122){
+        ascii= letterValue + offset %26; 
         if (ascii > 122) { 
           ascii = ascii -26;
         }
@@ -66,8 +67,8 @@
           ascii= ascii +26;
         }
       }
-      if ( 65<= valorLetra && valorLetra <=90){
-        ascii= valorLetra + offset %26; 
+      if ( 65<= letterValue && letterValue <=90){
+        ascii= letterValue + offset %26; 
         if (ascii > 90) { 
           ascii = ascii -26;
         }
@@ -75,10 +76,10 @@
           ascii= ascii +26;
         }
       }
-      codigoGuardado= String.fromCharCode(ascii);
-      palabraFinal+= codigoGuardado;
+      savedCode= String.fromCharCode(ascii);
+      finalWord+= savedCode;
     }
-    return palabraFinal;
+    return finalWord;
   } 
 };
 export default cipher;

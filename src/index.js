@@ -1,35 +1,36 @@
-let codeMode=0;
-function Codecero(codeMode){
-    codeMode=0;
-    document.getElementById("btnCodi").innerHTML= "Codificar";
-  return codeMode
-  }
-  
-  function Codeuno(codeMode){
-    codeMode=1;
-    document.getElementById("btnCodi").innerHTML= "Decodificar";
-    return codeMode
-  }
-  
-import cipher from './cipher.js';
+let changes=0;
 
-document.getElementById("btnCodi").addEventListener('click',function(){
-    let traeTexto = document.getElementById("boxMens");
-    let valorTexto = traeTexto.value;
-    let offset= parseInt(document.getElementById("numOffset").value);
-    if (codeMode==0){
-        document.getElementById("boxMenCodi").value=cipher.encode(offset,valorTexto);
+document.getElementById("linkEncode").addEventListener('click',function (){
+    btnEncode();
+});
+
+document.getElementById("linkDecode").addEventListener('click',function (){
+    btnDecode();
+});
+
+function btnEncode(){
+    changes=0;
+    document.getElementById("btnEncodeDecode").innerHTML= "Codificar";
+  }
+  
+  function btnDecode(){
+    changes=1;
+    document.getElementById("btnEncodeDecode").innerHTML= "Decodificar";
+  }
+  
+
+document.getElementById("btnEncodeDecode").addEventListener('click',function(){
+    let bringText = document.getElementById("firstMessageBox");
+    let textValue = bringText.value;
+    let offset= parseInt(document.getElementById("numberOffset").value);
+
+    if (changes==0){
+        document.getElementById("secondMessageBox").value=cipher.encode(offset,textValue);
     }
     else {
-        document.getElementById("boxMenCodi").value=cipher.decode(offset,valorTexto);
+        document.getElementById("secondMessageBox").value=cipher.decode(offset,textValue);
 
     }
 });
 
-document.getElementById("linkCodi").addEventListener('click',function (){
-    codeMode=Codecero(codeMode);
-});
-
-document.getElementById("linkDeco").addEventListener('click',function (){
-    codeMode=Codeuno(codeMode);
-});
+import cipher from './cipher.js';

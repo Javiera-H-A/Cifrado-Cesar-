@@ -1,4 +1,4 @@
- const cipher = { 
+const cipher = { 
   encode: (offset, textValue) => {
 
     if (typeof offset !== "number") {
@@ -8,10 +8,6 @@
       throw new TypeError ('${ textValue } es distinto de {"string"}')
     }
     
-    if (isNaN(offset)){
-      return ""
-    } 
-
     let letterValue;    
     let ascii;
     let savedCode;
@@ -56,10 +52,7 @@
     if (typeof textValue!== "string") {
       throw new TypeError ('${ textValue } es distinto de {"string"}')
     }
-    if (isNaN(offset)){
-      return ""
-    } 
-
+    
     let letterValue;
     let ascii;
     let savedCode;

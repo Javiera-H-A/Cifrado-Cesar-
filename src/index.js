@@ -23,13 +23,18 @@ document.getElementById("btnEncodeDecode").addEventListener('click',function(){
     let bringText = document.getElementById("firstMessageBox");
     let textValue = bringText.value;
     let offset= parseInt(document.getElementById("numberOffset").value);
-
-    if (changes==0){
-        document.getElementById("secondMessageBox").value=cipher.encode(offset,textValue);
+    
+    if (isNaN(offset)){
+        //pass
     }
-    else {
-        document.getElementById("secondMessageBox").value=cipher.decode(offset,textValue);
-
+    else { 
+        if (changes==0){
+            document.getElementById("secondMessageBox").value=cipher.encode(offset,textValue);
+        }
+        else {
+            document.getElementById("secondMessageBox").value=cipher.decode(offset,textValue);
+    
+        }
     }
 });
 

@@ -86,14 +86,21 @@ p {
     border-radius: 10px;
     background-color: rgba(255,255,255,0.5);
     font-weight: bold;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
+    padding-top: 6px;
+    padding-left: 10px;
+    font-size: 18px;
     font-family: 'moderna';
+  
 }
 ::placeholder{
     color:#000;
     font-weight: bold;
     letter-spacing: 2px;
     font-family: 'moderna';
+    padding: 4px;
+    font-size: 18px;
+    
 }
 #secondMessageBox {
     width:100%;
@@ -102,7 +109,10 @@ p {
     border-radius: 10px;
     font-weight: bold;
     background-color: rgba(255,255,255,0.5);
-    letter-spacing: 2px;
+    letter-spacing: 3px;
+    padding-top: 6px;
+    padding-left: 10px;
+    font-size: 18px;
     font-family: 'moderna';
 }
 #numberOffset {
@@ -114,7 +124,7 @@ p {
 }
 #btnEncodeDecode {
     border: 0px;
-    width: 120px;
+    width: 127px;
     height: 50px;
     background-color: #3d2d61;
     border-radius: 10px;

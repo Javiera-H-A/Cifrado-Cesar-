@@ -3,10 +3,15 @@
 
     if (typeof offset !== "number") {
       throw new TypeError ('${ offset } es distinto de {"number"}')
-}
+    }
     if (typeof textValue!== "string") {
-      throw new TypeError ('${ valorTexto } es distinto de {"string"}')
-}
+      throw new TypeError ('${ textValue } es distinto de {"string"}')
+    }
+    
+    if (isNaN(offset)){
+      return ""
+    } 
+
     let letterValue;    
     let ascii;
     let savedCode;
@@ -16,8 +21,10 @@
     for(let j=0; j< textValue.length; j++){
       letterValue=textValue.charCodeAt(j);
       ascii=letterValue;
+
       if ( 97<=letterValue && letterValue <= 122){
         ascii= letterValue + offset %26; 
+
         if (ascii > 122) { 
           ascii = ascii -26;
           
@@ -45,10 +52,14 @@
 
     if (typeof offset !== "number") {
       throw new TypeError ('${ offset } es distinto de {"number"}')
-}
+    }
     if (typeof textValue!== "string") {
-      throw new TypeError ('${ valorTexto } es distinto de {"string"}')
-}
+      throw new TypeError ('${ textValue } es distinto de {"string"}')
+    }
+    if (isNaN(offset)){
+      return ""
+    } 
+
     let letterValue;
     let ascii;
     let savedCode;
@@ -58,8 +69,10 @@
     for(let j=0; j< textValue.length; j++){
       letterValue=textValue.charCodeAt(j);
       ascii=letterValue;
+
       if ( 97<=letterValue && letterValue <= 122){
         ascii= letterValue + offset %26; 
+
         if (ascii > 122) { 
           ascii = ascii -26;
         }
@@ -69,6 +82,7 @@
       }
       if ( 65<= letterValue && letterValue <=90){
         ascii= letterValue + offset %26; 
+
         if (ascii > 90) { 
           ascii = ascii -26;
         }
